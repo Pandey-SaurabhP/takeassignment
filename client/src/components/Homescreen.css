@@ -1,0 +1,23 @@
+/* Style for the container of the home screen */
+.home-screen-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+/* Style for the buttons */
+.home-screen-button {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+/* Hover effect on buttons */
+.home-screen-button:hover {
+    background-color: #0056b3;
+}

@@ -1,0 +1,56 @@
+/* Style for the table container */
+.display-container {
+    width: 1000px;
+    margin-left: 50px;
+}
+
+/* Style for table header */
+.submissions-table th:nth-child(-n+3) {
+    width: 14%; /* Adjust width as needed */
+    font-size: 12px;
+    /* background-color: #f2f2f2; */
+    vertical-align: top; /* Align content to the top */
+}
+
+.submissions-table th:nth-child(4) {
+    /* width: 64%; Adjust width as needed */
+    text-align: left;
+    background-color: #f2f2f2;
+    font-size: 12px;
+    vertical-align: top; /* Align content to the top */
+}
+
+.submissions-table {
+    /* width: 150px; Adjust width as needed */
+    background-color: #f2f2f2;
+    padding: 8px; 
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    font-size: 12px;
+    vertical-align: top; /* Align content to the top */
+}
+
+/* Style for table data cells */
+.submissions-table td:nth-child(-n+3) {
+    width: 150px; /* Adjust width as needed */
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    vertical-align: top; /* Align content to the top */
+}
+
+.submissions-table td:nth-child(5) {
+    width: 150px; /* Adjust width as needed */
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+    vertical-align: top; /* Align content to the top */
+}
+
+/* Style for alternate rows */
+.submissions-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+/* Style for headings */
+.submissions-heading {
+    margin-top: 20px;
+}
