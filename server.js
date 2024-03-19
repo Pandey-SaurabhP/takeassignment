@@ -43,6 +43,7 @@ app.get('/viewsubmissions', (req, res) => {
     const endIndex = page * limit;
 
     // Modify the query to include the ID range for each page
+    console.log('received request : ', startIndex, endIndex);
     const query = `SELECT * FROM submissions WHERE id >= ${startIndex + 1} AND id <= ${endIndex} ORDER BY uploadtime DESC`;
 
     db.query(query, (error, results) => {

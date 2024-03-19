@@ -8,22 +8,24 @@ const DisplayDataComponent = () => {
     const [totalPages, setTotalPages] = useState(1);
     const itemsPerPage = 5;
 
-    const fetchData = async () => {
-        try {
-            const response = await axios.get(`https://tufassignment.onrender.com/viewsubmissions?page=${currentPage}&limit=${itemsPerPage}`);
-            setData(response.data.map(submission => ({ ...submission, expanded: false })));
-        } catch (error) {
-            console.error('Error fetching data:', error);
-        }
-    };
-
     useEffect(() => {
+        const fetchData = async () => {
+            try {
+                // const response = await axios.get(`http://localhost:3001/viewsubmissions?page=${currentPage}&limit=${itemsPerPage}`);
+                const response = await axios.get(`https://tufassignment.onrender.com/viewsubmissions?page=${currentPage}&limit=${itemsPerPage}`);
+                setData(response.data.map(submission => ({ ...submission, expanded: false })));
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        };
+        
         fetchData();
         fetchTotalPages();
     }, [currentPage]);
 
     const fetchTotalPages = async () => {
         try {
+            // const response = await axios.get(`http://localhost:3001/submissions/count`);
             const response = await axios.get('https://tufassignment.onrender.com/submissions/count');
             const totalCount = response.data.count;
             const totalPages = Math.ceil(totalCount / itemsPerPage);
