@@ -9,10 +9,10 @@ app.use(express.json());
 app.use(cors());
 
 const db = mysql.createConnection({
-    host: 'localhost',
-    user: 'root',
-    password: 'Saurabh@04',
-    database: 'tufproject'
+    host: 'b22p2pk53hqmbzpgv6yl-mysql.services.clever-cloud.com',
+    user: 'uxuebldrkaolppxi',
+    password: 'lLnH7UIXxJviwjW9OgcW',
+    database: 'b22p2pk53hqmbzpgv6yl'
 });
 
 db.connect((err) => {
